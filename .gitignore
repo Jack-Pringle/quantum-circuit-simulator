@@ -1,3 +1,9 @@
 build/
 bin/
 obj/
+out/
+
+.vscode/
+.idea/
+*.swp
+*.swo
