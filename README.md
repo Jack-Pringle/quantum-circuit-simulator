@@ -41,4 +41,6 @@ CNOT 1 0
 
 ## Supported Gates
 The following are a list of supported gates (note: CNOT and SWAP require exactly 1 control, TOFFOLI requires exactly 2 controls)
+```
 X, Y, Z, H, T, TDAG, S, SDAG, SWAP, CNOT, TOFFOLI
+```
