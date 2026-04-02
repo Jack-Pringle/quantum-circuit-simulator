@@ -2,6 +2,7 @@
 
 ## Requirements
 C++17 Compatible Compiler
+
 CMake 3.10 or higher
 
 ## Build Instructions
@@ -20,14 +21,15 @@ After building, run the following command from the build directory:
 ```
 
 When prompted for a circuit file name, ensure the file is located in the circuits directory
+
 For example:
 
-To use the following circuit:
+To use circuit
 ```
 ../circuits/bell_pair.txt
 ```
 
-use the following file name:
+use this file name
 ```
 bell_pair.txt
 ```
