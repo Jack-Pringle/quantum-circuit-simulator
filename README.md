@@ -21,8 +21,15 @@ After building, run the following command from the build directory:
 
 When prompted for a circuit file name, ensure the file is located in the circuits directory
 For example:
+
+To use the following circuit:
 ```
 ../circuits/bell_pair.txt
+```
+
+use the following file name:
+```
+bell_pair.txt
 ```
 
 ## Circuit Formatting
@@ -40,7 +47,7 @@ CNOT 1 0
 ```
 
 ## Supported Gates
-The following are a list of supported gates (note: CNOT and SWAP require exactly 1 control, TOFFOLI requires exactly 2 controls)
+The following are a list of supported gates (note: **CNOT** and **SWAP** require exactly 1 control, **TOFFOLI** requires exactly 2 controls)
 ```
 X, Y, Z, H, T, TDAG, S, SDAG, SWAP, CNOT, TOFFOLI
 ```
