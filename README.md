@@ -37,6 +37,8 @@ bell_pair.txt
 ## Circuit Formatting
 Circuits files are text files.
 
+Note: This simulator uses Little-Endian formatting. This means Qubit 0 is the least significant bit and is represented by the right-most output qubit.
+
 Each line is formatted as follows:
 ```
 instruction target_qubit control_q1,control_q2,...
