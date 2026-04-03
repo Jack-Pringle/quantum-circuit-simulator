@@ -35,7 +35,7 @@ bell_pair.txt
 ```
 
 ## Circuit Formatting
-Circuits files are text files.
+Circuits files are text files. Comments can be made with a '**#**'.
 
 Each line is formatted as follows:
 ```
