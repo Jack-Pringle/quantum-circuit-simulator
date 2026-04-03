@@ -73,6 +73,12 @@ Circuit createCircuit() {
         while (std::getline(f, line)) {
             lineNumber += 1;
 
+            // remove comments
+            size_t hash = line.find('#');
+            if (hash != std::string::npos) {
+                line = line.substr(0, hash);
+            }
+            
             // read line words
             std::stringstream ss(line);
             std::vector<std::string> words;
