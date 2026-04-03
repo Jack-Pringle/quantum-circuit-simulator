@@ -1,2 +1,4 @@
-h 0
-cnot 1 0
+# Entangles a pair of qubits (|00> and |11>)
+
+H 0
+CNOT 1 0
