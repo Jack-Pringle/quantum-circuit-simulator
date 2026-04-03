@@ -30,6 +30,11 @@ std::vector<std::complex<double>> simulate(const Circuit& circuit, const std::un
         const std::vector<int>& controls = instruction.getControls();
         const mapFunc& gateFunction = gates.at(name);
 
+        std::size_t controlMask = 0;
+        for (int control : controls) {
+            controlMask = controlMask | (static_cast<std::size_t>(1) << control);
+        }
+        
         // qubit index pair selection (pair 0 and 1 in qubit place of index for each index)
         std::size_t blockSize =  static_cast<std::size_t>(1) << (target + 1);
         std::size_t blocks = static_cast<std::size_t>(1) << (qubits - target - 1);
@@ -42,16 +47,7 @@ std::vector<std::complex<double>> simulate(const Circuit& circuit, const std::un
 
                 // dont apply change if a control exists but is 0
                 // control is necessarily the same at first and second, so only first checked
-                bool controlsPass = true;
-
-                for (int control : controls) {
-                    if (!((first >> control) & 1)) {
-                        controlsPass = false;
-                        break;
-                    }
-                }
-
-                if (controlsPass) {
+                if ((first & controlMask) == controlMask) {
                     std::pair<std::complex<double>, std::complex<double>> output = gateFunction(state[first], state[second]);
 
                     state[first] = output.first;
