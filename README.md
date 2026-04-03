@@ -44,6 +44,8 @@ instruction target_qubit control_q1,control_q2,...
 
 For example, here is **bell_pair.txt**
 ```
+# Entangles a pair of qubits (|00> and |11>)
+
 H 0
 CNOT 1 0
 ```
