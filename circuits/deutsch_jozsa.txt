@@ -1,0 +1,23 @@
+# Deutsch-Josza determines if a function is balanced or constant.
+# It is an exponential speedup of the classical equivalent.
+
+# input qubits (0-1) to |+>
+H 0
+H 1
+
+# ancilla to |->
+X 2
+H 2
+
+# balanced oracle (XOR here)
+CNOT 2 1
+CNOT 2 0
+
+# return input qubits to |0>
+H 0
+H 1
+
+# If constant, expectation is |->|00>
+# Expected output distribution for this example:
+# 011: 0.5
+# 111: 0.5
