@@ -6,7 +6,7 @@ C++17 Compatible Compiler
 CMake 3.10 or higher
 
 ## Build Instructions
-Run the following commands from the root directory:
+Run the following commands in the root directory:
 ```bash
 mkdir build
 cd build
@@ -15,7 +15,7 @@ cmake --build .
 ```
 
 ## Running the Simulator
-After building, run the following command from the build directory:
+After building, run with the following command in the build directory:
 ```bash
 ./simulator
 ```
