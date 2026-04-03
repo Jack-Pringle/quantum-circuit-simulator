@@ -5,7 +5,7 @@
 H 0
 H 1
 
-# ancilla to |->
+# ancilla to |-> (for phase kickback [alters input])
 X 2
 H 2
 
